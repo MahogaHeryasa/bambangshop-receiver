@@ -77,7 +77,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement receive function in Notification controller.`
     -   [x] Commit: `Implement list_messages function in Notification service.`
     -   [x] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -91,3 +91,9 @@ This is the place for you to write reflections:
 2. Di Rust, variabel statis biasanya tidak dapat dimutasi secara default, hal ini adalah untuk memastikan *thread-safety* dengan mencegah adanya *data race* atau perbedaan data antara satu *thread* dengan *thread* yang lain.
 
 #### Reflection Subscriber-2
+
+1. Setelah saya mencoba mengeksplorasi `lib.rs`, berdasarkan pemahaman saya, secara keseluruhan, file `lib.rs` mengatur dan mendefinisikan struktur utama dari proyek Rust, termasuk inisialisasi variabel global, definisi struktur data, dan implementasi fungsi-fungsi yang diperlukan.
+
+2. Dengan *Observer pattern*, ketergantungan antara `Main App` dan `Receiver` dapat terhapuskan, sehingga perubahan maupun penambahan *receiver* tidak memengaruhi bagian utama aplikasi. Penambahan *instance* `Main App` juga mudah untuk dilakukan dengan *observer pattern* ini, karena setiap instance dari `Main App` akan menjaga list dari observernya sendiri. Namun, jika kita ingin semua observer menerima notifikasi perubahan dari instance manapun, perlu ditambahkan *logic* yang menyatukan komunkasi antar *instance*.
+
+3. Saya belum pernah mencoba untuk membuat test sendiri maupun mengembangkan dokumentasi pada *Postman Collection*. Meskipun begitu, menurut saya hal tersebut dapat membantu menguji keberlangsungan aplikasi dengan memeriksa response dari suatu request atau suatu aksi apakah sudah sesuai dengan harapan, serta memeriksa apakah setiap kasus pada aplikasi sudah ter-*cover*. 
