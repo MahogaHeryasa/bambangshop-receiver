@@ -66,7 +66,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Create Notification database and Notification repository struct skeleton.`
     -   [x] Commit: `Implement add function in Notification repository.`
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
     -   [x] Commit: `Create Notification service struct skeleton.`
     -   [x] Commit: `Implement subscribe function in Notification service.`
@@ -85,5 +85,9 @@ This is the place for you to write reflections:
 ### Mandatory (Subscriber) Reflections
 
 #### Reflection Subscriber-1
+
+1. `Mutex<>` hanya memperbolehkan satu thread untuk mengakses data dalam satu waktu. Sementara `RwLock<>` memperbolehkan beberapa thread untuk membaca atau menulis data dalam satu waktu. `Vec<Notification>` dipakai bersamaan oleh banyak thread dalam satu waktu, sehingga penggunaan `RwLock<>` lebih cocok digunakan untuk kasus pembacaan notifikasi dengan banyak thread.
+
+2. Di Rust, variabel statis biasanya tidak dapat dimutasi secara default, hal ini adalah untuk memastikan *thread-safety* dengan mencegah adanya *data race* atau perbedaan data antara satu *thread* dengan *thread* yang lain.
 
 #### Reflection Subscriber-2
